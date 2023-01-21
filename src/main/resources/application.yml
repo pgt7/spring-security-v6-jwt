@@ -1,0 +1,35 @@
+server:
+  port: 3000
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  application:
+    name: user-loan-contract
+  datasource:
+    url: jdbc:oracle:thin:@//10.99.1.17:1521/oraesb
+    username: LOAN_CONTRACT
+    password: 1qaz2wsx
+    driver-class-name: oracle.jdbc.OracleDriver
+    type: org.springframework.jdbc.datasource.SimpleDriverDataSource
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        format_sql: true
+      show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 10MB
+  jackson:
+    serialization:
+      write_date_keys_as_timestamps: true
+      indent_output: true
+      write_dates_as_timestamps: true
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+    default-leniency: true
