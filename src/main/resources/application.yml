@@ -8,9 +8,9 @@ spring:
   application:
     name: user-loan-contract
   datasource:
-    url: jdbc:oracle:thin:@//10.99.1.17:1521/oraesb
-    username: LOAN_CONTRACT
-    password: 1qaz2wsx
+    url: <database-url>
+    username: <username>
+    password: <password>
     driver-class-name: oracle.jdbc.OracleDriver
     type: org.springframework.jdbc.datasource.SimpleDriverDataSource
 
